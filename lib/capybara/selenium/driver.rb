@@ -25,7 +25,7 @@ class Capybara::Selenium::Driver < Capybara::Driver::Base
 
   def initialize(app, options={})
     @app = app
-    @browser = nil
+    @browser = options[:webdriver]
     @exit_status = nil
     @options = DEFAULT_OPTIONS.merge(options)
   end
